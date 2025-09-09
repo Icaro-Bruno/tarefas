@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Lista de Tarefas</title>
+</head>
+<body>
+<h1>Lista de Tarefas</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Data de Entrega</th>
+    <th>Responsável</th>
+    <th>Ações</th>
+  </tr>
+  <tr th:each="item : ${tarefas}">
+    <td th:text="${item.nome}"></td>
+    <td th:text="${item.dataEntrega}"></td>
+    <td th:text="${item.responsavel}"></td>
+    <td>
+      <a th:if="${item.id != null}" th:href="@{/editar/{id}(id=${item.id})}">Editar</a>
+      <a th:if="${item.id != null}" th:href="@{/deletar/{id}(id=${item.id})}"
+         onclick="return confirm('Tem certeza que deseja deletar?');">Deletar</a>
+    </td>
+  </tr>
+</table>
+
+<a th:href="@{/nova}">Nova Tarefa</a>
+</body>
+</html>
