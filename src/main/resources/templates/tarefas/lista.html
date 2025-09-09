@@ -2,6 +2,91 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>Lista de Tarefas</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+      font-weight: 600;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f7fd;
+    }
+
+    a {
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 0.9em;
+      transition: background-color 0.2s ease;
+    }
+
+    a[href*="editar"] {
+      background-color: #f39c12;
+      color: white;
+    }
+
+    a[href*="editar"]:hover {
+      background-color: #d68910;
+    }
+
+    a[href*="deletar"] {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    a[href*="deletar"]:hover {
+      background-color: #c0392b;
+    }
+
+    /* Botão Nova Tarefa */
+    .nova-tarefa {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #2ecc71;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .nova-tarefa:hover {
+      background-color: #27ae60;
+    }
+  </style>
+
 </head>
 <body>
 <h1>Lista de Tarefas</h1>
