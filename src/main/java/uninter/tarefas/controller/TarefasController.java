@@ -17,6 +17,7 @@ public class TarefasController {
 
     @PostMapping
     public ResponseEntity<Tarefas> criar(@RequestBody Tarefas tarefa) {
+        System.out.println("Recebido: " + tarefa);
         Tarefas novaTarefa = tarefasService.salvar(tarefa);
         return ResponseEntity.ok(novaTarefa);
     }

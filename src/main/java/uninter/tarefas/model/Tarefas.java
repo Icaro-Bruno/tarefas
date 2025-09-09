@@ -1,5 +1,6 @@
 package uninter.tarefas.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,6 +21,7 @@ public class Tarefas {
     private Long id;
 
     private String nome;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dataEntrega;
     private String responsavel;
 }
